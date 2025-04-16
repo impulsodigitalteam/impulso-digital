@@ -1,0 +1,14 @@
+.benefitIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #f84e25;
+  border-radius: 9999px;
+}
+
+.benefitIconContainer svg {
+  width: auto;
+  height: 2.5rem;
+}

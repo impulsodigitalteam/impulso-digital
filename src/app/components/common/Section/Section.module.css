@@ -1,0 +1,115 @@
+.section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.section.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 6rem);
+}
+
+.sectionContent:not(.section.hero .sectionContent) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.sectionBody:not(
+    .section.contact .sectionBody,
+    .section.planOfAction .sectionBody
+  ) {
+  display: flex;
+}
+
+.sectionBody:not(.section.faq .sectionBody, .section.contact .sectionBody) {
+  gap: 4rem;
+  justify-content: center;
+}
+
+.section.hero .sectionBody,
+.section.us .sectionBody {
+  align-items: center;
+}
+
+.section h2 {
+  position: relative;
+  padding-bottom: calc(1.5rem + 6px);
+  font-size: 2.75em;
+  text-align: center;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 35%;
+  height: 6px;
+  background-color: #f84e25;
+  transform: translateX(-50%);
+}
+
+.section.services .sectionBody,
+.section.benefits .sectionBody {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.section.faq .sectionBody {
+  flex-direction: column;
+  width: 100%;
+  max-width: 1050px;
+  gap: 1rem;
+}
+
+.section.contact .sectionBody {
+  width: 100%;
+  max-width: 880px;
+}
+
+.section.planOfAction .sectionBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 880px;
+}
+
+@media screen and (min-width: 921px) {
+  .section.hero {
+    max-height: 650px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .section.hero {
+    height: auto;
+    max-height: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section.hero .sectionBody {
+    flex-direction: column-reverse;
+  }
+
+  .section.us .sectionBody {
+    flex-direction: column;
+  }
+
+  .section.faq .sectionBody,
+  .section.planOfAction .sectionBody {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section.planOfAction .sectionBody {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}

@@ -1,0 +1,33 @@
+.link:not(.link.active),
+.dropdownBtn:not(.dropdownBtn.active) {
+  transition: 0.2s ease-in-out;
+  filter: brightness(0.8);
+}
+
+.active {
+  filter: brightness(1);
+}
+
+.link:hover:not(.link.active:hover),
+.dropdownBtn:hover:not(.dropdownBtn.active:hover) {
+  filter: brightness(1);
+}
+
+.dropdownBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1em;
+}
+
+.dropdown ul {
+  z-index: 9;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.dropdown li {
+  padding: 1rem;
+  background-color: #181818;
+}

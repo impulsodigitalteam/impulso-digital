@@ -1,0 +1,87 @@
+.item {
+  display: flex;
+}
+
+.item:not(.item.faq) {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item.service,
+.item.benefit {
+  max-width: 350px;
+}
+
+.item.service {
+  position: relative;
+  padding: 2rem 2rem calc(2rem + 2.5rem / 2) 2rem;
+  background-color: #181818;
+  border: 2px solid #f84e25;
+  border-radius: 8px;
+}
+
+.item.faq {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1.75rem;
+  background-color: #181818;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.item.planOfAction {
+  width: 100%;
+}
+
+.item h3 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.item p:not(.item.faq p) {
+  text-align: center;
+}
+
+.item.faq p:first-child {
+  width: 85%;
+}
+
+.item.faq p {
+  font-size: 1.15em;
+  text-align: left;
+}
+
+.item.service svg:not(.item a svg) {
+  width: auto;
+  height: 3rem;
+  font-size: 2em;
+  color: #f84e25;
+}
+
+.item.service a {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f84e25;
+  transform: translateY(50%);
+  transition: 0.2s ease-in-out;
+  border-radius: 9999px;
+}
+
+.item.service a:hover {
+  filter: brightness(0.8);
+}
+
+.item.planOfAction span {
+  font-size: 6em;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 4px #f84e25;
+}

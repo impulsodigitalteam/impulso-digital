@@ -1,0 +1,51 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  background-color: #181818;
+}
+
+.headerContent {
+  display: flex;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.headerContent {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  height: 25%;
+}
+
+.logo img {
+  width: auto;
+  height: 100%;
+}
+
+.hamburgerMenuBtn {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .headerContent {
+    padding: 0 2rem;
+  }
+
+  .logo,
+  .hamburgerMenuBtn {
+    z-index: 99;
+  }
+
+  .hamburgerMenuBtn {
+    display: flex;
+  }
+}
